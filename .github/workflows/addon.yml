@@ -1,0 +1,19 @@
+# Checks this add-on on every push and pull request, and attaches the built
+# .mcaddon to every published release. The steps live in TheCoberto/bedrock-tools
+# (.github/workflows/addon.yml), so they're shared by every add-on.
+
+name: Add-on
+
+on:
+  push:
+  pull_request:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  addon:
+    uses: TheCoberto/bedrock-tools/.github/workflows/addon.yml@main
+    secrets: inherit
