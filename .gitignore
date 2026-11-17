@@ -1,0 +1,11 @@
+﻿*.mcaddon
+*.mcpack
+node_modules/
+
+# Visual Studio workspace state
+.vs/
+
+# Packaged builds
+dist/
+*.mcpack
+*.mcaddon
